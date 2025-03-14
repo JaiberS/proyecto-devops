@@ -29,7 +29,7 @@ Este proyecto implementa una aplicación escalable utilizando Docker, Kubernetes
 ### **1. Clonar el repositorio**
 ```bash
 git clone https://github.com/JaiberS/proyecto-devops.git
-cd devops-project
+cd proyecto-devops
 ```
 
 ### **2. Construir y ejecutar el contenedor con Docker**
@@ -75,7 +75,13 @@ kubectl run -i --tty load-generator --rm --image=busybox -- /bin/sh
 while true; do wget -q -O- http://devops-service; done
 ```
 
-### **6. Desplegar con Terraform**
+### **6. Para detener kubernetes y escalabilidad automatica (HPA)**
+```bash
+kubectl delete service devops-service
+kubectl delete hpa devops-hpa
+```
+
+### **7. Desplegar con Terraform**
 ```bash
 terraform init
 terraform apply
