@@ -28,7 +28,7 @@ Este proyecto implementa una aplicación escalable utilizando Docker, Kubernetes
 
 ### **1. Clonar el repositorio**
 ```bash
-git clone [https://github.com/tu-usuario/devops-project.git](https://github.com/JaiberS/proyecto-devops.git)
+git clone https://github.com/JaiberS/proyecto-devops.git
 cd devops-project
 ```
 
