@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: devops
 spec:
-  replicas: 3 
+  replicas: 1 
   selector:
     matchLabels:
       app: devops
@@ -17,3 +17,14 @@ spec:
           image: jaibers10/devops:latest
           ports:
             - containerPort: 3000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "200m"
+              memory: "256Mi"
+
+
+
+
